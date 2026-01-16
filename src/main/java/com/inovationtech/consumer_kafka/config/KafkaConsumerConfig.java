@@ -40,8 +40,8 @@ public class KafkaConsumerConfig {
   }
 
   @Bean
-  public CurrentKafkaListnerContainerFactory<String, OrderRecord> orderListenerContainerFactory() {
-    CurrentKafkaListnerContainerFactory<String, OrderRecord> factory = new CurrentKafkaListnerContainerFactory<>();
+  public ConcurrentKafkaListenerContainerFactory<String, OrderRecord> orderListenerContainerFactory() {
+    ConcurrentKafkaListenerContainerFactory<String, OrderRecord> factory = new ConcurrentKafkaListenerContainerFactory<>();
     factory.setConsumerFactory(ordConsumerFactory());
     
     return factory;
