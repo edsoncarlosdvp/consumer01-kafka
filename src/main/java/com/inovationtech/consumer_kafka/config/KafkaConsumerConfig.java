@@ -28,7 +28,7 @@ public class KafkaConsumerConfig {
     Map<String, Object> configs = new HashMap<>();
     
     configs.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
-    configs.put(ConsumerConfig.GROUP_ID_CONFIG, "napoleon-order-processed");
+    configs.put(ConsumerConfig.GROUP_ID_CONFIG, "order-processed");
     configs.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, ErrorHandlingDeserializer.class);
     configs.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, ErrorHandlingDeserializer.class);
     configs.put(ErrorHandlingDeserializer.KEY_DESERIALIZER_CLASS, StringDeserializer.class);
